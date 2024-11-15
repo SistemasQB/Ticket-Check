@@ -1,0 +1,204 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del logo */
+.logo img {
+    height: 50px; /* Ajusta según el tamaño del logo */
+}
+
+/* Estilos del título */
+.titulo {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos de la sección de información */
+.informacion {
+    text-align: right;
+}
+
+.informacion p {
+    margin: 2px 0;
+}
+
+/* Estilos del formulario */
+.formulario {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form {
+    display: grid;
+    gap: 15px; /* Espaciado entre los campos */
+}
+
+/* Estilos de los campos del formulario */
+form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px; /* Aumentamos el tamaño */
+    font-size: 16px; /* Tamaño de texto más grande */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+form textarea {
+    resize: vertical; /* Permite cambiar el tamaño del área de texto verticalmente */
+}
+
+/* Estilos para los checkboxes */
+.checkboxes {
+    margin-top: 20px;
+}
+
+.checkboxes label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #083ed1;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #083ed1;
+}
+
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del formulario */
+.formulario {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form {
+    display: grid;
+    gap: 15px; /* Espaciado entre los campos */
+}
+
+/* Estilos de las filas que contienen los campos */
+.fila {
+    display: flex;
+    gap: 15px; /* Espaciado entre los campos dentro de la fila */
+}
+
+/* Estilos de los campos dentro de la fila */
+.campo {
+    flex: 1; /* Hace que los campos ocupen el mismo tamaño */
+}
+
+/* Estilos de los campos del formulario */
+form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px; /* Tamaño del campo */
+    font-size: 16px; /* Tamaño de texto más grande */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los checkboxes */
+.checkboxes {
+    margin-top: 20px;
+}
+
+.checkboxes p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para cada fila de checkboxes */
+.checkbox-fila {
+    display: flex;
+    justify-content: space-between;  /* Espacio entre los checkboxes */
+    gap: 15px;  /* Espaciado entre los checkboxes */
+    margin-bottom: 15px;  /* Espaciado entre filas */
+}
+
+/* Asegura que las etiquetas no se desborden */
+.checkbox-fila label {
+    flex: 1;
+    font-size: 14px;
+    display: block;
+    padding-left: 10px;
+}
+

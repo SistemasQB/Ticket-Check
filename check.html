@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO DE MANTENIMIENTO AUTONOMO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="firma1-removebg-preview.png" alt="Logo">
+        </div>
+        <h1 class="titulo">REGISTRO DE MANTENIMIENTO AUTONOMO</h1>
+        <div class="informacion">
+            <p>Código: QB-FR-A-16-01</p>
+            <p>Rev.: 00</p>
+            <p>Fecha de emisión: 10-04-2023</p>
+            <p>Fecha de revisión: N/A</p>
+        </div>
+    </header>
+
+    <!-- Formulario adicional -->
+    <section class="formulario">
+        <form action="#" method="POST">
+            
+            <!-- Fila para Fecha y Región -->
+            <div class="fila">
+                <div class="campo">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="campo">
+                    <label for="region">Región:</label>
+                    <input type="text" id="region" name="region" required>
+                </div>
+            </div>
+    
+            <!-- Resto de los campos -->
+            <label for="nombre">Nombre quien realiza:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="dispositivo">Email:</label>
+            <input type="email" id="dispositivo" name="dispositivo" required>
+    
+            <label for="descripcion">Tipo de equipo:</label>
+            <input id="descripcion" name="descripcion" required>
+
+
+
+              <!-- Checkboxes -->
+              <div class="checkboxes">
+                <p>Selecciona las opciones relevantes:</p>
+                <div class="checkbox-fila">
+                    <label><input type="checkbox" name="check1"> Desinstalar Programas</label>
+                    <label><input type="checkbox" name="check2"> Quitar Archivos</label>
+                    <label><input type="checkbox" name="check3"> Borrar Temporales</label>
+                </div>
+                <div class="checkbox-fila">
+                    <label><input type="checkbox" name="check4"> Borrar Cookies</label>
+                    <label><input type="checkbox" name="check5"> Realizar Actualizaciones</label>
+                    <label><input type="checkbox" name="check6"> Funcionamiento de Altavoces</label>
+                </div>
+                <div class="checkbox-fila">
+                    <label><input type="checkbox" name="check7"> Funcionamiento de Puertos USB</label>
+                    <label><input type="checkbox" name="check8"> Funcionamiento de Adaptador de Red</label>
+                    <label><input type="checkbox" name="check9"> Limpieza General del Equipo</label>
+                </div>
+                <div class="checkbox-fila">
+                    <label><input type="checkbox" name="check10"> Funcionamiento de Camara y Microfono</label>
+                    <label><input type="checkbox" name="check11"> Funcionamiento y Limpieza de Teclado y Mouse</label>
+                    <label><input type="checkbox" name="check12"> Funcionamiento Cargador y Centro de Carga</label>
+                </div>
+            </div>
+    
+            <button type="submit" style="background-color: blue; color: white;">Enviar</button>
+
+        </form>
+    </section>
+    
+          
+            
+
+            
+        </form>
+    </section>
+</body>
+</html>
