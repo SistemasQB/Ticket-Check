@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION DE CAPITAL HUMANO</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1f77cf;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        header .logo img {
+            height: 50px;
+        }
+        header .informacion {
+            margin-top: 10px;
+        }
+        .titulo {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .formulario {
+            background-color: white;
+            padding: 30px;
+            margin: 30px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .formulario form {
+            display: flex;
+            flex-direction: column;
+        }
+        .formulario label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .formulario input, .formulario select, .formulario textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%; /* Asegura que todos los campos de entrada ocupen el 100% del ancho */
+        }
+        .formulario button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .formulario button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="firma1-removebg-preview.png" alt="Logo">
+    </div>
+    <h1 class="titulo">GESTION DE CAPITAL HUMANO </h1>
+    <div class="informacion">
+    </div>
+</header>
+
+<!-- Formulario -->
+<section class="formulario">
+    <form id="solicitudForm" action="#" method="POST" class="needs-validation" novalidate>
+        <!-- Primera fila (Status y Clave en la misma fila) -->
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="status" class="form-label">Status:</label>
+                <select class="form-select" id="status" name="status" required>
+                    <option value="">Seleccione un estado</option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                    <option value="suspendido">Suspendido</option>
+                </select>
+                <div class="invalid-feedback">Por favor, seleccione un estado.</div>
+            </div>
+            <div class="col-6">
+                <label for="clave" class="form-label">Clave:</label>
+                <input type="text" class="form-control" id="clave" name="clave" required>
+                <div class="invalid-feedback">Por favor, ingrese una clave.</div>
+            </div>
+        </div>
+
+        <!-- Segunda fila (Correo, CURP, y RFC en la misma fila) -->
+        <div class="row mb-3">
+            <div class="col-4">
+                <label for="correo" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+                <div class="invalid-feedback">Por favor, ingrese un correo electrónico válido.</div>
+            </div>
+            <div class="col-4">
+                <label for="curp" class="form-label">CURP:</label>
+                <input type="text" class="form-control" id="curp" name="curp" maxlength="18" required>
+                <div class="invalid-feedback">Por favor, ingrese un CURP válido (máximo 18 caracteres).</div>
+            </div>
+            <div class="col-4">
+                <label for="rfc" class="form-label">RFC:</label>
+                <input type="text" class="form-control" id="rfc" name="rfc" maxlength="13" required>
+                <div class="invalid-feedback">Por favor, ingrese un RFC válido (máximo 13 caracteres).</div>
+            </div>
+        </div>
+
+        <!-- Tercera fila (Teléfono, Nombre, NSS en la misma fila) -->
+        <div class="row mb-3">
+            <div class="col-4">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" maxlength="10" pattern="\d{10}" required>
+                <div class="invalid-feedback">Por favor, ingrese un teléfono válido (10 dígitos).</div>
+            </div>
+            <div class="col-4">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <div class="invalid-feedback">Por favor, ingrese un nombre.</div>
+            </div>
+            <div class="col-4">
+                <label for="nns" class="form-label">NNS:</label>
+                <input type="text" class="form-control" id="nns" name="nns" maxlength="11" required>
+                <div class="invalid-feedback">Por favor, ingrese un NNS válido (máximo 11 caracteres).</div>
+            </div>
+        </div>
+
+        <!-- Cuarta fila (Puesto Inicial y Puesto Actual en la misma fila) -->
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="puesto_inicial" class="form-label">Puesto Inicial:</label>
+                <input type="text" class="form-control" id="puesto_inicial" name="puesto_inicial" required>
+                <div class="invalid-feedback">Por favor, ingrese el puesto inicial.</div>
+            </div>
+            <div class="col-6">
+                <label for="puesto_actual" class="form-label">Puesto Actual:</label>
+                <input type="text" class="form-control" id="puesto_actual" name="puesto_actual" required>
+                <div class="invalid-feedback">Por favor, ingrese el puesto actual.</div>
+            </div>
+        </div>
+
+        <!-- Quinta fila -->
+        <div class="mb-3">
+            <label for="departamento" class="form-label">Departamento:</label>
+            <input type="text" class="form-control" id="departamento" name="departamento" required>
+            <div class="invalid-feedback">Por favor, ingrese el departamento.</div>
+        </div>
+
+        <!-- Sexta fila (Calle, Número de Calle, Colonia, Estado en la misma fila) -->
+        <div class="row mb-3">
+            <div class="col-3">
+                <label for="calle" class="form-label">Calle:</label>
+                <input type="text" class="form-control" id="calle" name="calle" required>
+                <div class="invalid-feedback">Por favor, ingrese la calle.</div>
+            </div>
+            <div class="col-2">
+                <label for="numero_calle" class="form-label">Número de Calle:</label>
+                <input type="text" class="form-control" id="numero_calle" name="numero_calle" required>
+                <div class="invalid-feedback">Por favor, ingrese un número válido.</div>
+            </div>
+            <div class="col-3">
+                <label for="colonia" class="form-label">Colonia:</label>
+                <input type="text" class="form-control" id="colonia" name="colonia" required>
+                <div class="invalid-feedback">Por favor, ingrese la colonia.</div>
+            </div>
+            <div class="col-4">
+                <label for="estado" class="form-label">Estado:</label>
+                <input type="text" class="form-control" id="estado" name="estado" required>
+                <div class="invalid-feedback">Por favor, ingrese el estado.</div>
+            </div>
+        </div>
+
+        <!-- Séptima fila -->
+        <div class="mb-3">
+            <label for="escolaridad" class="form-label">Escolaridad:</label>
+            <input type="text" class="form-control" id="escolaridad" name="escolaridad" required>
+            <div class="invalid-feedback">Por favor, ingrese la escolaridad.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</section>
+
+<!-- Enlace a Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Activar la validación de los formularios de Bootstrap
+    (function() {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+</body>
+</html>
